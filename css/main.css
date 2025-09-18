@@ -1,0 +1,234 @@
+/* ===== Global styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: 0; 
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Chrome, Edge, Safari */
+}
+
+html, body {
+    overflow-x: clip;
+}
+
+/* ===== Header ===== */
+header {
+    padding: 10px;
+    transition: background-color 0.5s ease-in;
+    z-index: 10;
+    position: sticky!important ;
+    top: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar li {
+    list-style: none;
+    padding: 10px;
+}
+
+.collapsedNavbar{
+    width: 70vw;
+    height: 100dvh;
+    border: 1px solid;
+    position: fixed;
+    background-color: white;
+    right: 0;
+    
+    transform:  translateX(150%);
+    transition: transform 0.5s ease-in-out;
+}
+.collapsedNavbar.shown{
+    transform: translateX(0);
+}
+
+/* ===== Navigation Links ===== */
+.navLinks {
+    border-radius: 20px;
+    color: white;
+}
+
+.navLinks > * {
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+
+.navLinks :nth-child(1) {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navLinks :nth-child(4) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.navLinkItem {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+.navLinkItem.active::after{
+    transform: scale(1);
+}
+.navLinkItem::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    transform: scale(0);
+    transform-origin:center;
+    border-radius: 10px;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+}
+.navLinkItem:hover::after{
+    transform: scale(1);
+}
+
+.bookBtn{
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: red;
+    color: white;
+    font-family: 'Lato',sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* ===== Nav Toggle (Hamburger) ===== */
+.navToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    cursor: pointer;
+    z-index:10;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition:  0.2s ease-in-out;
+}
+
+
+
+.navToggle > * {
+    z-index: inherit;
+    border: 1px;
+    width: 20px;
+    height: 2px;
+    display: inherit;
+    background-color: white;
+    transform-origin: center;
+    transition: 0.4s ease-in-out;
+}
+
+.navToggle > :nth-child(2) {
+    transform: translateX(3px);
+}
+
+.navToggle.clicked > :nth-child(1) {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+.navToggle.clicked > :nth-child(2) {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.navToggle.clicked > :nth-child(3) {
+    transform: translateY(-6px) rotateZ(-45deg);
+}
+
+
+
+/* ===== Logo ===== */
+.logoContainer {
+    width: 80px;
+    height: auto;
+}
+
+.logoContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== Background Slider ===== */
+#Hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin-top: -77px;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 2s ease-in-out;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.scrollContainer{
+    width: 50px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3vh;
+    cursor: pointer;
+}
+.scrollContainer > *{
+    font-size: 25px;
+    animation: load 2s  ease-in-out infinite;
+}
+
+.scrollContainer > :nth-child(1){animation-delay: 0.2;}
+.scrollContainer >:nth-child(2){animation-delay: 0.4s;}
+.scrollContainer :nth-child(3){animation-delay: 0.6s;}
+
+@keyframes load{
+    from {
+        color: white;
+    }
+    to{
+        color: grey;
+    }
+}
+
+@media(max-width:720px){
+    .navLinks, .bookBtn{
+        display: none !important;
+    }
+    .navToggle{
+        display: flex!important;
+    }
+    
+}
