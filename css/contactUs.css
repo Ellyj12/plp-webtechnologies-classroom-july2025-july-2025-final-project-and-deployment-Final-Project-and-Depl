@@ -23,6 +23,8 @@ header {
     z-index: 10;
     position: sticky !important;
     top: 0;
+    background-color: black;
+    
 }
 
 
@@ -334,6 +336,90 @@ header {
     align-items: flex-end;
 }
 
+.mainContent{
+    padding: 40px;
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* dark overlay */
+    url('/assets/images/Contact-Us-Page/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Lato' ,sans-serif;
+    width: 100vw;
+  
+    background-repeat: no-repeat;
+    text-align: center;
+    
+}
+
+.textContent > *{
+    margin-bottom: 20px;
+}
+
+.formContainer{
+    background-color: gray;
+    display: flex;
+    height: 100%;
+    font-family: 'lato' , sans-serif;
+}
+.formContainer h1{
+    color: white;
+}
+.formLeft , .formRight{
+    width: 50%;
+}
+.formLeft > *{
+    margin-bottom: 20px;
+    color: white;
+}
+.formLeft{
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+}
+.formRight {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.formRight label{
+    text-align: left;
+    margin-bottom: 15px;
+
+}
+.formRight input{
+    width: 85%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    margin-bottom: 30px;
+    padding-bottom: 5px;    
+}
+
+.formRight input:focus{
+    outline: none;
+    color: white;
+    
+    border-bottom: 1px solid white;
+}
+.formRight button{
+    width: 20%;
+    margin-top: 10px;
+    background-color: red;
+    padding: 5px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+#message{
+    resize: none;
+    width: 80%;
+    height: 100px;
+
+}
+
+
 
 /* ===== Scroll Indicator ===== */
 .scrollContainer {
@@ -344,81 +430,6 @@ header {
     align-items: center;
     margin-bottom: 3vh;
     cursor: pointer;
-}
-/* ===== Main Content ===== */
-#mainContent {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 75px;
-}
-
-#mainContent > :nth-child(1) { order: 1; }
-#mainContent > :nth-child(2) { order: 2; }
-#mainContent > :nth-child(3) {
-    order: 3;
-    align-items: flex-end;
-    text-align: right;
-}
-#mainContent > :nth-child(4) { order: 4; }
-#mainContent > :nth-child(5) {
-    order: 5;
-    height: 80vh;
-}
-#mainContent > :nth-child(6) { order: 6; }
-
-.mainContentImage,
-.mainContentText {
-    width: 50%;
-    height: 70vh;
-}
-
-.mainContentText {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
-    flex-direction: column;
-}
-
-.mainContentText > * {
-    margin-bottom: 15px;
-}
-
-.mainContentText h1 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
-.mainContentText h2 {
-    font-family: 'Great Vibes', cursive;
-    position: relative;
-    font-weight: 300;
-    letter-spacing: 3px;
-}
-
-.mainContentText p {
-    font-family: 'Lato', sans-serif;
-    width: 60%;
-    letter-spacing: 3px;
-}
-
-.mainContentImage img {
-    width: 100%;
-    height: 100%;
-}
-
-.scrollContainer > * {
-    font-size: 25px;
-    animation: load 2s ease-in-out infinite;
-}
-
-.scrollContainer > :nth-child(1) { animation-delay: 0.2s; }
-.scrollContainer > :nth-child(2) { animation-delay: 0.4s; }
-.scrollContainer :nth-child(3) { animation-delay: 0.6s; }
-
-@keyframes load {
-    from { color: white; }
-    to   { color: grey; }
 }
 
 .footer{
@@ -481,6 +492,7 @@ header {
     #mainContent > :nth-child(6) {
         height: 65vh !important;
     }
+   
 
     .mainContentText p {
         width: 100% !important;
@@ -509,6 +521,14 @@ header {
     }
     #footerImageContainer{
         align-items: center;
+    }
+    .formContainer{
+        flex-direction: column;
+    }
+    .formLeft , .formRight{
+        width: 100%;
+        
+        
     }
     
 }

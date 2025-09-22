@@ -3,26 +3,26 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b4aab607c5.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
     </style>
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/contactUs.css">
+    <title>Contact Us</title>
+
 </head>
 
 <body>
-
     <header id="header">
         <nav class="navbar">
             <a href="index.html" class="logoContainer">
                 <img src="assets/images/Home-Page/logo.png" alt="">
             </a>
             <ul id="navLinks" class="navLinks">
-                <li><a class="navLinkItem active" href="index.html">Home</a></li>
+                <li><a class="navLinkItem " href="index.html">Home</a></li>
                 <li>
                     <button class="navLinkItem" id="menuDropdownBtn">Menu <i
                             class="fa-solid fa-chevron-down"></i></button>
@@ -40,7 +40,7 @@
                     </div>
                 </li>
                 <li><a class="navLinkItem" href="AboutUs.html">About Us</a></li>
-                <li><a class="navLinkItem" href="contactUs.html">Contact Us</a></li>
+                <li><a class="navLinkItem active" href="contactUs.html">Contact Us</a></li>
             </ul>
             <div class="navToggle" id="nav-toggle">
                 <span></span>
@@ -76,58 +76,44 @@
         </nav>
     </header>
 
+
+
     <main>
-        <section id="Hero">
-            <div class="scrollContainer" id="scrollBtn">
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
-                <i class="fa-solid fa-chevron-down"></i>
+        <section class="mainContent">
+            <div class="textContent">
+                <h1>Contact Us</h1>
+                <h2>Need help with your online booking, have a question or need more information? Just drop us a line!
+                </h2>
+                <h2>Inquiries please call or email</h2>
+                <h3>Call us: +256 789 701364, +256 772 554194</h3>
+                <h3>Email: booking@cafferoma.com</h3>
             </div>
         </section>
-        <section id="mainContent">
-            <div class="mainContentImage">
-                <img src="/assets/images/Home-Page/OLD_1997.webp" class="mainContentImage" alt="">
+        <section class="form">
+            <div class="formContainer">
+                <div class="formLeft">
+                    <h1>Get in touch </h1>
+                    <h3>Please complete the form below and member of the team will be in conctac with you shortly</h3>
+                </div>
+                <div class="formRight">
+                    <label for="Name">Your name</label>
+                    <input type="text" title="Name" id="">
+                    <label for="email">Your email address </label>
+                    <input type="email" title="email" id="">
+                    <label for="Subject">Subject</label>
+                    <input type="text" title="Subject" id="">
+                    <label for="message">Message</label>
+                    <textarea name="message" title="message" id="message"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
             </div>
-            <div class="mainContentText">
-                <h2>
-                    Since 1977
-                </h2>
-                <h1>Culinary</h1>
-                <p>Caffè Roma l'originale has always been a place, where family and friends get together for a taste of
-                    authentic Italian Pizza and European cuisine. </p>
-            </div>
-            <div class="mainContentText">
-                <h2>
-                    The Stay
-                </h2>
-                <h1>Quiet Luxury</h1>
-                <p>Our bespoke cottages are nestled in the heart of Muyenga Tank Hill and offer a haven of quiet luxury,
-                    set in a lush tropical garden - moments away from a vibrant city center. </p>
-                <a href="https://hotels.cloudbeds.com/reservation/lNI0VS" class="reserveBtn"> Reserve a Room</a>
-            </div>
-            <div class="mainContentImage">
-                <img src="/assets/images/Home-Page/Accomodation.webp" alt="">
-            </div>
-            <div class="mainContentImage">
-                <img src="/assets/images/Home-Page/Worker.webp" alt="" srcset="">
-            </div>
-            <div class="mainContentText">
-                <h2>
-                    Family
-                </h2>
-                <h1>HOME IS WHERE THE
-                    HEARTH
-                    IS</h1>
-                <p>We place the warmth of family and community at the centre of everything we do. With a deeply
-                    passionate team, fresh house-made ingredients, and the pizza toppings you love, we pour our timeless
-                    legacy into your experience. Because to us, home is where the
-                    hearth
-                    is - and there’s always room at our table </p>
-
-            </div>
-
         </section>
     </main>
+
+
+
+
+
     <footer class="footer">
         <div class="footerContent" id="footerImageContainer">
             <img src="/assets/images/Home-Page/logo.png" alt="" srcset="">
@@ -136,7 +122,7 @@
             <h1>Quick links</h1>
             <a href="#" id="footerMenuBtn">Menu</a>
             <a href="">About Us</a>
-            <a href="contactUs.html">Contact Us</a>
+            <a href="">Contact Us</a>
         </div>
         <div class="footerContent">
             <h1>Connect</h1>
@@ -151,14 +137,13 @@
             <a href="#"><i class="fa-solid fa-location-dot"></i>47A Tank Hill Rd, Kampala</a>
         </div>
     </footer>
-
-
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
-    <script src="/Javascript/script.js"></script>
+    <script src="/Javascript/contactUs.js"></script>
+
 </body>
 
 </html>
