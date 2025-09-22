@@ -340,7 +340,7 @@ header {
     padding: 40px;
     background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* dark overlay */
-    url('/assets/images/Contact-Us-Page/background.jpg');
+    url('assets/images/Contact-Us-Page/background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
