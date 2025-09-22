@@ -421,16 +421,6 @@ header {
 
 
 
-/* ===== Scroll Indicator ===== */
-.scrollContainer {
-    width: 50px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 3vh;
-    cursor: pointer;
-}
 
 .footer{
     display: flex;
